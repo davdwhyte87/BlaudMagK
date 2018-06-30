@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "1019371395529",
+    "firebase_url": "https://blaudmag-50b90.firebaseio.com",
+    "project_id": "blaudmag-50b90",
+    "storage_bucket": "blaudmag-50b90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019371395529:android:410927ab437542eb",
+        "android_client_info": {
+          "package_name": "com.example.davidwhyte.blaudmag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019371395529-k0bp2pip3qjgcitdn145579rujqhr4mb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.davidwhyte.blaudmag",
+            "certificate_hash": "731e4e528baad7bf04faf52dad322551a386e0b7"
+          }
+        },
+        {
+          "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb9dVlIeytssbmBPBzMzJU1uBjIzFkf8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019371395529:android:8aeac4c22a37d4af",
+        "android_client_info": {
+          "package_name": "com.example.davidwhyte.blaudmagk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019371395529-dssbj8osmlk4o7hs21kjhlkh4ur5c7pj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.davidwhyte.blaudmagk",
+            "certificate_hash": "731e4e528baad7bf04faf52dad322551a386e0b7"
+          }
+        },
+        {
+          "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb9dVlIeytssbmBPBzMzJU1uBjIzFkf8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019371395529-lnbf86ntohkj09f4nm5caupnp6ojmvnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
