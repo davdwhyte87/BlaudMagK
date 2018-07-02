@@ -6,4 +6,9 @@ class Post(){
     var content:String=""
     var id:String=""
     var key:String=""
+    var likes:Int=0
+    var liked:Boolean=false
+    var users_liked= mutableListOf<Int>()
+
+
 }

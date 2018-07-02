@@ -15,7 +15,11 @@
         <item name="android:padding">10dp</item>
     </style>
 
+    <style name="likesNo">
+        <item name="android:textSize">17dp</item>
+        <item name="android:padding">10dp</item>
 
+    </style>
     <style name="PostContent">
         <item name="android:textSize">20dp</item>
         <item name="android:padding">5dp</item>

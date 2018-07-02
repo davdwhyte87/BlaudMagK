@@ -39,24 +39,73 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        getData()
     }
 
     override fun onStart() {
         super.onStart()
 //        create()
-        viewManager= LinearLayoutManager(this)
-        val noteslist=ArrayList<Post>()
-        val nlist=read()
-        for (x in noteslist){
-            Log.v("android-list",noteslist.toString())
+    }
+
+    fun getData():ArrayList<Post> {
+        val posts= ArrayList<Post>()
+        val myList=ArrayList<Post>()
+
+        var b:String=""
+        val ref= FirebaseDatabase.getInstance().getReference("post")
+        val valueEventListener=object :ValueEventListener{
+            override fun onCancelled(p0: DatabaseError?) {
+
+            }
+
+            override fun onDataChange(p0: DataSnapshot?) {
+                val children = p0!!.children
+                children.forEach {
+                    val post=it.getValue(Post::class.java)
+                    posts.add(post!!)
+                }
+                setAdapter(posts)
+            }
         }
-        viewAdapter=NoteAdapter(nlist,this)
+
+        val c=ref.addListenerForSingleValueEvent(valueEventListener)
+
+        Log.v("redDinne",c.toString())
+        myList.forEach {
+            Log.v("myListDre",it.content)
+        }
+
+//        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+//            override public fun onDataChange(snapshot: DataSnapshot?){
+//                val ps:ArrayList<Post> = ArrayList()
+//                val children = snapshot!!.children
+//                children.forEach {
+//                    val post=it.getValue(Post::class.java)
+//                    posts.add(post!!)
+//                   return posts
+//                }
+//                posts.forEach {
+//                    Log.v("postsDre",it.content)
+//                }
+//            }
+//
+//            override public fun onCancelled(p0: DatabaseError?) {
+//                Log.v("dfb","An error dbfirebase")
+//            }
+//        })
+//        Log.v("testing it",b)
+        return posts
+    }
+
+    fun setAdapter(posts:ArrayList<Post>){
+        viewManager= LinearLayoutManager(applicationContext)
+        viewAdapter=NoteAdapter(posts,applicationContext)
         recyclerView=findViewById<RecyclerView>(R.id.post_recycler).apply {
             layoutManager=viewManager
             adapter=viewAdapter
+            setHasFixedSize(true)
         }
     }
-
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
@@ -115,29 +164,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    fun read():ArrayList<Post> {
-        val posts = ArrayList<Post>()
-        val ref= FirebaseDatabase.getInstance().getReference("post")
-        ref.addListenerForSingleValueEvent(object : ValueEventListener {
-            override public fun onDataChange(snapshot: DataSnapshot?){
-                val children = snapshot!!.children
-                children.forEach {
-                    val post=it.getValue(Post::class.java)
-                    posts.add(post!!)
-                    Log.v("dfb",it.toString())
-                }
-            }
 
-            override public fun onCancelled(p0: DatabaseError?) {
-                Log.v("dfb","An error dbfirebase")
-            }
-        })
-        var post=Post()
-        post.content="this is id jskdj sjd"
-        post.title="Endowen bowen life"
-        posts.add(post)
-        return posts
-    }
 
     fun create(){
         val ref= FirebaseDatabase.getInstance().getReference("post")

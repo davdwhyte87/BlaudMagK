@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
-    <LinearLayout
-        android:padding="10dp"
-        android:orientation="vertical"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -15,61 +13,68 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <EditText
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:inputType="text"
-                android:layout_height="wrap_content"
-                android:hint="@string/h_title"
-                android:id="@+id/f_title"/>
-        </LinearLayout>
-        <LinearLayout
-            android:padding="5dp"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/f_imagebtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/camera"/>
-        </LinearLayout>
-        <LinearLayout
-            android:padding="5dp"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/f_image"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="250dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:padding="10dp"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:hint="@string/h_content"
-                android:id="@+id/f_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:padding="10dp"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/btn_create"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/h_title"
+                    android:id="@+id/f_title"/>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
                 android:layout_gravity="center"
-                android:text="@string/btn_create"/>
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/f_imagebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/camera"/>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/f_image"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/h_content"
+                    android:id="@+id/f_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_create"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/btn_create"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 </android.support.constraint.ConstraintLayout>
